@@ -1,0 +1,689 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+:root {
+  --btn-dark: #2f3340;
+  --dark: #1b212f;
+  --dark-text: #7e838c;
+  --white: #fff;
+  --dark-active: #3c4250;
+  --bg-light-grey: #f8f9fb;
+}
+
+body {
+  background-color: var(--bg-light-grey);
+}
+
+a,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  height: 100vmax;
+  min-width: 320px;
+}
+
+header {
+  background-color: var(--dark);
+  color: var(--dark-text);
+  display: inline-block;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+footer {
+}
+
+/******************************************
+/* Header and Nav
+/*******************************************/
+
+.logo {
+  float: left;
+  width: 20px;
+  top: 40px;
+  position: relative;
+  left: 70px;
+  font-size: 25px;
+}
+
+nav {
+}
+
+nav ul {
+  text-transform: uppercase;
+  float: right;
+  right: 0;
+  margin-right: 5%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav label {
+  position: relative;
+  top: 25px;
+}
+.bar {
+  width: 30px;
+  display: block;
+  border-bottom: 3px solid var(--dark-text);
+  margin-bottom: 3px;
+}
+
+nav a,
+nav a:visited,
+nav a:link,
+nav a:active {
+  text-decoration: none;
+  color: var(--dark-text);
+  padding: 10px;
+}
+
+nav a:active,
+nav a:hover {
+  background-color: var(--dark-active);
+  border-radius: 3px;
+}
+
+/******************************************
+/* Brand section
+/*******************************************/
+.brand {
+  padding: 5%;
+  background-color: var(--dark);
+  color: var(--white);
+  top: -10px;
+  position: relative;
+  margin-bottom: -12px;
+}
+
+.brand p {
+  color: var(--dark-text);
+}
+.brand .left,
+.brand .right {
+  width: 40%;
+}
+
+.brand .right {
+  background-color: var(--white);
+  padding: 15px 35px;
+  border-radius: 7%;
+}
+.brand button {
+  text-transform: uppercase;
+}
+
+.brand .right img {
+  width: 100%;
+}
+/******************************************
+/* Marketing section
+/*******************************************/
+
+.marketing {
+  padding: 5%;
+}
+
+.marketing .left {
+  width: 45%;
+}
+
+.marketing .right {
+  width: 45%;
+}
+
+.marketing article {
+  float: left;
+  width: 35%;
+  margin: 20px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.marketing article p {
+  padding: 5px;
+  min-height: 65px;
+}
+.intro {
+  color: var(--dark-text);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 30px;
+  color: var(--dark);
+}
+
+p.details {
+  color: var(--dark-text);
+}
+
+article {
+  text-align: center;
+  color: var(--dark-text);
+  font-size: 15px;
+}
+
+article h3 {
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.rounded i {
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--dark);
+  margin-right: 20px;
+}
+
+.ordered {
+  display: block;
+  position: relative;
+  top: 30px;
+  text-align: center;
+}
+/******************************************
+/* Section solution
+/*******************************************/
+
+.solution {
+  padding: 5%;
+}
+
+.solution .left,
+.solution .right {
+  width: 45%;
+}
+
+.rounded-hidden {
+  display: none;
+}
+/******************************************
+/* How does section
+/*******************************************/
+
+.howdoes {
+  padding: 5%;
+}
+
+.howdoes .right {
+  width: 45%;
+}
+.howdoes .left {
+  width: 45%;
+}
+
+.square {
+  width: 50px;
+}
+
+.fa-square {
+  font-size: 25px;
+}
+
+/******************************************
+/* Account Section
+/*******************************************/
+.create-account {
+  padding: 5%;
+  text-align: left;
+}
+
+.create-account div {
+  width: 270px;
+}
+.create-account h3 {
+  font-size: 30px;
+}
+/******************************************
+/* Boxes section
+/*******************************************/
+
+.boxes {
+  width: 100%;
+  padding: 5%;
+  background-color: var(--dark);
+  clear: both;
+  overflow-x: hidden;
+}
+
+.box-1 {
+  display: inline-flex;
+}
+
+.box-2 {
+  display: inline-flex;
+  margin-left: -15%;
+}
+
+.box {
+  background-color: var(--white);
+  width: 375px;
+  float: left;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5%;
+  min-height: 177px;
+}
+
+.box h3 {
+  text-transform: uppercase;
+}
+.box i {
+  font-size: 25px;
+}
+
+/******************************************
+/* Loved section
+/*******************************************/
+
+.loved {
+  padding: 10%;
+}
+
+.loved .left {
+  width: 10%;
+  top: 50%;
+  position: relative;
+}
+
+.loved .left:nth-child(3) {
+  width: 70%;
+}
+
+.founder {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.left_image {
+  float: left;
+  width: 27px;
+  top: 15px;
+  display: block;
+  position: relative;
+  left: -25px;
+}
+
+.founder_image {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.separator {
+  height: 150px;
+}
+
+.contact .left,
+.contact .right {
+  width: 50%;
+}
+
+.contact {
+  background-color: var(--dark);
+  padding: 5%;
+  text-align: center;
+}
+
+.contact .btn {
+  margin-bottom: 20px;
+}
+
+.contacted {
+  color: white;
+  font-size: 25px;
+}
+
+/******************************************
+/* FOOTER SECTION
+/*******************************************/
+
+footer {
+  padding: 1%;
+}
+
+footer .small-screen {
+  display: none;
+}
+
+footer .parent {
+  width: 50%;
+}
+
+footer .parent > .left {
+  width: 33%;
+  padding: 20px;
+}
+
+footer .details {
+  max-width: 200px;
+}
+footer .parent.right {
+  float: right;
+  right: 0;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  list-style: none;
+  color: var(--dark-text);
+  padding-bottom: 20px;
+}
+
+footer i {
+  padding-right: 15px;
+}
+
+footer h3 {
+  text-align: left;
+}
+
+.menu-hidden {
+  display: none;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.btn {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  margin-right: 25px;
+}
+
+.btn-dark {
+  background-color: var(--dark);
+  border: none;
+  color: var(--white);
+}
+
+.btn-dark-on-white {
+  background-color: var(--btn-dark);
+  border: none;
+  color: var(--white);
+}
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media all and (max-width: 1400px) {
+  footer .parent > .left.secondo {
+    width: 30%;
+  }
+
+  footer .parent > .left.primo {
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .marketing .btn {
+    position: relative;
+    top: 90px;
+    display: block;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .marketing .left,
+  .marketing .right {
+    width: 100%;
+    float: left;
+    clear: both;
+    text-align: center;
+  }
+
+  .marketing article {
+    float: left;
+    width: 40%;
+  }
+
+  .solution .left,
+  .howdoes .left {
+    width: 30%;
+    float: left;
+  }
+
+  .solution .right,
+  .howdoes .right {
+    width: 55%;
+    float: right;
+  }
+
+  footer .parent > .left.secondo {
+    width: 25%;
+  }
+
+  footer .parent > .left.primo {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 960px) {
+  footer .parent.left,
+  footer .parent.right {
+    width: 100%;
+    float: left;
+  }
+  footer .parent .left {
+    width: 25%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .solution .left,
+  .solution .right {
+    width: 100%;
+  }
+
+  nav ul {
+    margin-right: 0%;
+  }
+
+  .loved .left {
+    width: 50%;
+    top: 0;
+    position: relative;
+  }
+
+  .loved .left:nth-child(3) {
+    width: 70%;
+  }
+
+  .brand-image {
+    padding-top: 30px;
+  }
+
+  .howdoes .left,
+  .howdoes .right {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 661px) {
+  .menuContent li {
+    display: inline;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .menu-hidden {
+    display: block;
+  }
+
+  .menuContent {
+    display: none;
+  }
+
+  #menuToggle ~ label {
+    display: block;
+  }
+
+  #menuToggle:checked ~ ul {
+    display: block;
+    top: 33px;
+    position: absolute;
+    background: var(--dark);
+    color: var(--bg-light-grey);
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 280px;
+  }
+
+  #menuToggle:checked ~ ul li {
+    padding: 10px;
+  }
+
+  #menuToggle:not(:checked) ~ ul {
+    display: none;
+  }
+
+  #menuToggle:not(:checked) ~ ul li {
+    padding: 10px;
+  }
+
+  #menuToggle:not(:checked) ~ .menu-hidden {
+    display: block;
+  }
+
+  #menuToggle:not(:checked) ~ .menu-hidden li {
+    display: inline-block;
+  }
+}
+@media all and (max-width: 600px) {
+  .hidden {
+    display: none;
+  }
+
+  .create-account div {
+    width: 100%;
+  }
+
+  .big {
+    display: none;
+  }
+  .rounded-hidden {
+    display: block;
+  }
+  .loved .left:nth-child(3) {
+    width: 100%;
+  }
+
+  .box-2 {
+    margin: 0 auto;
+  }
+  .brand .left {
+    float: left;
+    width: 100%;
+  }
+
+  .brand .right {
+    margin-top: 2em;
+    float: left;
+    width: 100%;
+  }
+
+  footer .parent > .left.primo {
+    width: 52%;
+  }
+
+  footer .parent > .left.secondo {
+    width: 50%;
+  }
+  footer .small-screen {
+    display: block;
+    width: 26%;
+  }
+  footer .right {
+    display: none;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .contact .left,
+  .contact .right {
+    width: 100%;
+    text-align: left;
+  }
+
+  footer .parent .left {
+    width: 32%;
+  }
+  .marketing article {
+    width: 85%;
+  }
+
+  .create-account .left {
+    width: 100%;
+  }
+  .create-account h3,
+  .intro,
+  .title {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 500px) {
+  footer .parent > .left.secondo {
+    width: 25%;
+  }
+
+  footer .parent > .left.primo {
+    width: 75%;
+  }
+}
