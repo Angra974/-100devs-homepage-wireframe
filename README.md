@@ -1,6 +1,6 @@
 # -100devs-hair-saloon
 
-Homepage Wireframe made as an assigment for #100devs bootcamp. Original design by Sergey Pikin
+Homepage Wireframe. Original design by Sergey Pikin 
 
 Live ? Clic on the image
 
